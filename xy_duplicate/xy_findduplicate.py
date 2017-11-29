@@ -48,7 +48,7 @@ def findduplicate():
     for storeid in allstoreid:
 
         filtered = {}
-        url = "http://productlocation.global.tesco.org:80/v2/stores/"+storeid+"/mods"
+        url = "http://abc/v2/stores/"+storeid+"/mods"
         response = ur.urlopen(url)
         data = json.loads(response.readall().decode('utf-8'))
         for content in data:

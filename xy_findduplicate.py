@@ -26,7 +26,7 @@ def findduplicate():
     for storeid in allstoreid:
         fh = open(resultfile, 'a', encoding='utf-8')
         filtered = {}
-        url = "http://productlocation.global.tesco.org:80/v2/stores/"+storeid+"/mods"
+        url = "http://abc/v2/stores/"+storeid+"/mods"
         response = ur.urlopen(url)
         data = json.loads(response.readall().decode('utf-8'))
         for content in data:
@@ -53,5 +53,5 @@ def showresult(filtered, storeid, fh):
 def main():
     findduplicate()
     print('done')
-    
+
 main()
